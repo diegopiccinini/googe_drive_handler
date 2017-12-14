@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    google_drive_handler (0.1.0.pre.rc)
+    google_drive_handler (0.1.1.pre.rc)
       dotenv (~> 2.2)
       google-api-client (~> 0.18)
 

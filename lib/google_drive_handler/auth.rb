@@ -1,7 +1,5 @@
-require 'google/apis/sheets_v4'
 require 'googleauth'
 require 'googleauth/stores/file_token_store'
-require 'google/apis/drive_v3'
 require 'fileutils'
 
 module GoogleDriveHandler
@@ -24,9 +22,7 @@ module GoogleDriveHandler
     attr_reader :scope, :user_id
 
     def initialize
-      @scope=ENV['SCOPE'].split
-      @service = Google::Apis::SheetsV4::SheetsService.new
-      @service.client_options.application_name = ENV['APPLICATION_NAME']
+      @scope=ENV['SCOPE'].split.map(&:to_i)
       @user_id='default'
     end
 

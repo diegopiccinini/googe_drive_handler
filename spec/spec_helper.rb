@@ -1,3 +1,4 @@
+require "byebug"
 require "bundler/setup"
 require "google_drive_handler"
 
