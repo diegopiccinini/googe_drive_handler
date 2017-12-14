@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "google_drive_handler"
+
+auth=GoogleDriveHandler::Auth.new
+auth.save_credentials
+
