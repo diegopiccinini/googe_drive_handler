@@ -35,7 +35,7 @@ module GoogleDriveHandler
 
     def choose_scope
 
-      puts "Choose one scope:"
+      puts "Choose one (typing the number) or more scopes (typing the numbers with one space between them):"
       scopes.each_pair do |k,v|
         puts "#{k}.- #{v[:name]}"
         puts "\t#{v[:desc]}"
@@ -101,13 +101,13 @@ module GoogleDriveHandler
       }
     end
 
-    private
-
     def credentials_path
       path=ENV['CREDENTIALS_PATH'] || Auth::default_credential_path
       name=scope_url.map { |a| a.split('/').last }.join('.and.')
       File.join(path, "sheets.googleapis.#{name}.yaml")
     end
+
+    private
 
     def scope_url
       if @scope.count<1

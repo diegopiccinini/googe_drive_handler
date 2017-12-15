@@ -2,7 +2,9 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/google_drive_handler`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+This gem helps you to create and save different credentials and scope setup using dot environment to setup the scopes and the credentials folders.
+By default is ~/.credentials/
+
 
 ## Installation
 
@@ -22,7 +24,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To create the credentials the first time, you need to save in the credetital directory the client_secret.json. You have to create a project and enable apis Google Drive, Sheets, Google+ and then create a credentials and download the client_secret.json
+By default the value is ~/.credentials/client_secret.json
+But you could overwrite using the envirnoment variable CLIENT_SECRET_PATH in the .env file.
+
+The command google_drive_auth is to help you to save the credentials. You can generate the credential for your scopes, running the command.
+You will get a url to authorize and get the autorization code. Paste in the terminal to save the credentials for the selected scopes.
+
+
 
 ## Development
 
